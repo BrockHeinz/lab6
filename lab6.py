@@ -1,5 +1,6 @@
 import turtle
 
+
 def main():
     stars_file = open('./draw_stars/stars.txt', 'r')
     stars = []
@@ -15,7 +16,6 @@ def main():
     turtle.speed(0)
     turtle.tracer(1, 0)
     t.color('white')
-
     for star in stars:
         jump(t, float(star[0]) * 250, float(star[1]) * 250)
         size = 10 / (float(star[4]) + 2)
@@ -47,7 +47,6 @@ def square(turt, side):
         turt.right(90)
     turt.end_fill()
     jump(turt, turt.xcor() + offset, turt.ycor() + offset)
-
 
 
 if __name__ == '__main__':
